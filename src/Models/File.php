@@ -13,6 +13,7 @@ use Illuminate\Foundation\Auth\User;
 
 /**
  * phpcs:disable Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
+ * @property string $name
  * @property Carbon $created_at
  */
 final class File extends Model
