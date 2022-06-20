@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Coddin\DataTables\DataTable\Rows;
 
-use App\Models\File;
-use App\Services\ArrayAble\ArrayHelper;
+use Coddin\DataTables\Models\File;
+use Coddin\DataTables\ArrayAble\ArrayHelper;
 
 final class FilesSection extends DataSection
 {

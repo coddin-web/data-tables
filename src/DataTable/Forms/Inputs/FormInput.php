@@ -76,8 +76,8 @@ abstract class FormInput implements FormInputInterface
             return call_user_func_array(
                 $this->valueGetter,
                 [
-                $model,
-                $this->name,
+                    $model,
+                    $this->name,
                 ],
             );
         }
