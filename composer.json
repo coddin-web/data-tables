@@ -5,6 +5,7 @@
     "require": {
         "php": "^8.0"
     },
+    "version": "0.1.0",
     "require-dev": {
         "laravel/framework": "^8.0",
         "phpstan/phpstan": "^1.7",
