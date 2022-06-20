@@ -40,4 +40,64 @@ class DataSection implements Arrayable
             'displaySectionType' => $this->displaySectionType,
         ];
     }
+
+    public static function default(
+        string $name,
+        ?string $description,
+        array $actions = [],
+        array $rows = [],
+    ): self {
+        return new self(
+            name: $name,
+            description: $description,
+            actions: $actions,
+            rows: $rows,
+            displaySectionType: self::DISPLAY_SECTION_TYPE_DEFAULT,
+        );
+    }
+
+    public static function address(
+        string $name,
+        ?string $description,
+        array $actions = [],
+        array $rows = [],
+    ): self {
+        return new self(
+            name: $name,
+            description: $description,
+            actions: $actions,
+            rows: $rows,
+            displaySectionType: self::DISPLAY_SECTION_TYPE_ADDRESS,
+        );
+    }
+
+    public static function dataTable(
+        string $name,
+        ?string $description,
+        array $actions = [],
+        array $rows = [],
+    ): self {
+        return new self(
+            name: $name,
+            description: $description,
+            actions: $actions,
+            rows: $rows,
+            displaySectionType: self::DISPLAY_SECTION_TYPE_DATA_TABLE,
+        );
+    }
+
+    public static function files(
+        string $name,
+        ?string $description,
+        array $actions = [],
+        array $rows = [],
+    ): self {
+        return new self(
+            name: $name,
+            description: $description,
+            actions: $actions,
+            rows: $rows,
+            displaySectionType: self::DISPLAY_SECTION_TYPE_FILES,
+        );
+    }
 }

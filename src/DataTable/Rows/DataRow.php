@@ -29,7 +29,7 @@ final class DataRow implements Arrayable
     }
 
     /**
-     * @return array<mixed>
+     * @return array<string, mixed>
      */
     public function toArray(): array
     {
@@ -38,5 +38,43 @@ final class DataRow implements Arrayable
             'value' => $this->value,
             'displayType' => $this->displayType,
         ];
+    }
+
+    /*
+     * Easy accessors
+     */
+    public static function text(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_TEXT);
+    }
+
+    public static function textArea(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_TEXTAREA);
+    }
+
+    public static function boolean(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_BOOLEAN);
+    }
+
+    public static function badge(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_BADGE);
+    }
+
+    public static function file(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_FILE);
+    }
+
+    public static function contact(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_CONTACT);
+    }
+
+    public static function address(string $label, mixed $value): self
+    {
+        return new self($label, $value, self::DISPLAY_TYPE_ADDRESS);
     }
 }
