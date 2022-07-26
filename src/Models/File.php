@@ -28,6 +28,7 @@ final class File extends Model
         'mime_type',
         'size',
         'uploader_id',
+        'folder_id',
         'relationable_type',
         'relationable_id',
     ];
